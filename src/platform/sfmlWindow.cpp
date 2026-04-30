@@ -58,12 +58,11 @@ bool SfmlWindow::shouldClose() {
 
 void SfmlWindow::pollEvent(Event keyboardEvent) {
     while(window->pollEvent(event)) {
-        eventSwitch();
-        keyboardEvent.keyboardSwitch();
+        eventSwitch(keyboardEvent);
     }
 }
 
-void SfmlWindow::eventSwitch(){
+void SfmlWindow::eventSwitch(Event keyboardEvent) {
     switch(event.type) {
         case sf::Event::Closed:
             window->close();
@@ -91,6 +90,8 @@ void SfmlWindow::eventSwitch(){
                     isFullscreen = true;
                     resize();
                 }
+            } else{
+                keyboardEvent.keyboardSwitch(event);
             }
             break;
     }

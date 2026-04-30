@@ -6,11 +6,10 @@
 class Event {
 private:
     Entities *entities;
-    sf::Event event;
     
 public:
     Event(Entities &entities);
     virtual ~Event();
 
-    void keyboardSwitch();    
+    void keyboardSwitch(sf::Event event);    
 };

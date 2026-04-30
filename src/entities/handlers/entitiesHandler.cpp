@@ -10,11 +10,14 @@ sf::Sprite Entities::getPlayerSprite() {
 }
 
 
-void Entities::update(float deltaTime) {}
+void Entities::update(float deltaTime) {
+    getDeltaTime(deltaTime);
+}
 
 void Entities::getDeltaTime(float deltaTime) {
     this->deltaTime = deltaTime;
     player.getDeltaTime(deltaTime);
 
+    std::cout << "deltaTime: " << deltaTime << "\n";
     std::cout << "x: " << player.posX << " y: " << player.posY << "\n";
 }

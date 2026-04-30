@@ -14,3 +14,7 @@ Entity::Entity(const std::string &path) : PATH(path) {
 
 Entity::~Entity() {
 }
+ 
+void Entity::update(float deltaTime) {
+
+}

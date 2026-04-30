@@ -9,6 +9,7 @@ public:
     const unsigned int WIDTH = 1280;
     const unsigned int HEIGHT = 720;
     const std::string TITLE = "Simple Factory 2D";
+    float deltaTime = 0.0f;
 
     Game();
     virtual ~Game();

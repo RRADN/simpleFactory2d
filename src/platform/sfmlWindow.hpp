@@ -21,7 +21,7 @@ private:
     void initWindow(const unsigned int width, const unsigned int height, const std::string &title);
     void setImageIcon();
     
-    void eventSwitch();
+    void eventSwitch(Event keyboardEvent);
     void resize();
    
 public:

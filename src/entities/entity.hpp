@@ -11,6 +11,8 @@ protected:
 public:
     sf::Sprite sprite;
 
+    virtual void update(float deltaTime);
+
     Entity(const std::string &path);
     virtual ~Entity();
     

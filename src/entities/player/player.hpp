@@ -5,6 +5,9 @@
 
 class Player : public Entity, public Movement {
 public:
+
+    void update(float deltaTime) override;
+    
     Player();
     virtual ~Player();
 };

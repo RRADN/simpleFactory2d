@@ -12,6 +12,7 @@ Movement::~Movement() {
 
 void Movement::moveUp() {
     posY -= speed * deltaTime;
+    std::cout << "posY: " << posY << "\n";
 }
 
 void Movement::moveDown() {

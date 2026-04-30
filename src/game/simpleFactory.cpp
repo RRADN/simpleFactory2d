@@ -21,15 +21,17 @@ void Game::run() {
 }
 
 void Game::gameLoop() {
-
+    float deltaTime = clock.restart().asSeconds();
     Event event(entities);
 
     while (!window.shouldClose()) {
         window.pollEvent(event);
 
-        float deltaTime = clock.restart().asSeconds();
+        deltaTime = clock.restart().asSeconds();
+        if (sf::Keyboard::W) {
+            entities.player.moveUp();
+        }
 
-        entities.getDeltaTime(deltaTime);
         render();
         update(deltaTime);
     }
