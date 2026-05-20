@@ -1,6 +1,6 @@
 #pragma once 
 
-#include "../entity.hpp"
+#include "../primitive/entity.hpp"
 #include "../../logic/movement/movement.hpp"
 
 class Player : public Entity, public Movement {

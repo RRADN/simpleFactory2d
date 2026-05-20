@@ -15,14 +15,13 @@ private:
     bool isFullscreen;
 
     sf::RenderWindow *window;
-    sf::Event event;
     sf::Image icon;
 
     void initWindow(const unsigned int width, const unsigned int height, const std::string &title);
     void setImageIcon();
     
-    void eventSwitch(Event keyboardEvent);
-    void resize();
+    void eventSwitch(const sf::Event &event, Event keyboardEvent);
+    void resize(const sf::Event &event, const auto* resized);
    
 public:
 

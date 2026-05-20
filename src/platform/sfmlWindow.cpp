@@ -32,7 +32,7 @@ void SfmlWindow::setImageIcon() {
     if (!icon.loadFromFile("assets/logo/logo.png")) {
         throw std::runtime_error("Failed to load the window icon.");
     }
-    window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+    window->setIcon(icon);
 }
 
 void SfmlWindow::clear() {
@@ -47,8 +47,8 @@ void SfmlWindow::display(){
     window->display();
 }
 
-void SfmlWindow::resize() {
-    sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
+void SfmlWindow::resize(const sf::Event &event, const auto* resized) {
+    sf::FloatRect visibleArea({0.0f, 0.0f}, {static_cast<float>(resized->size.x), static_cast<float>(resized->size.y)});
     window->setView(sf::View(visibleArea));
 }
 
@@ -57,42 +57,31 @@ bool SfmlWindow::shouldClose() {
 }
 
 void SfmlWindow::pollEvent(Event keyboardEvent) {
-    while(window->pollEvent(event)) {
-        eventSwitch(keyboardEvent);
+    while (const std::optional event = window->pollEvent())
+    {
+        eventSwitch(*event, keyboardEvent);
     }
 }
 
-void SfmlWindow::eventSwitch(Event keyboardEvent) {
+void SfmlWindow::eventSwitch(const sf::Event &event, Event keyboardEvent) {
     keyboardEvent.playerMove();
     
-    switch(event.type) {
-        case sf::Event::Closed:
-            window->close();
-            throw std::runtime_error("Window closed by user.");
-            break;  
-
-        case sf::Event::Resized:
-            resize();
-            break;
-
-        case sf::Event::LostFocus:
-            break;
-
-        case sf::Event::GainedFocus:
-            break;
-
-        case sf::Event::KeyPressed:
-            if (event.key.code == sf::Keyboard::F11){
-                if (isFullscreen) {
-                    window->create(sf::VideoMode({WIDTH, HEIGHT}), TITLE, sf::Style::Default);
-                    isFullscreen = false;
-                    resize();
-                } else {
-                    window->create(sf::VideoMode::getDesktopMode(), TITLE, sf::Style::Fullscreen);
-                    isFullscreen = true;
-                    resize();
-                }
+    if (event.is<sf::Event::Closed>()) {   
+        window->close();
+        throw std::runtime_error("Window closed by user.");
+    }
+    else if (const auto* resized = event.getIf<sf::Event::Resized>()) {
+        resize(event, resized);
+    }
+    else if (const auto* keyPressed = event.getIf<sf::Event::KeyPressed>()) {
+        if (keyPressed->code == sf::Keyboard::Key::F11) {
+            if (isFullscreen) {
+                window->create(sf::VideoMode({WIDTH, HEIGHT}), TITLE, sf::Style::Default);
+                isFullscreen = false;
+            } else {
+                window->create(sf::VideoMode::getDesktopMode(), TITLE, sf::State::Fullscreen);
+                isFullscreen = true;
             }
-            break;
+        }
     }
 }

@@ -5,9 +5,9 @@
 class Tile {
 private:
     const std::string PATH = " ";
-    int layer = 0;
     sf::Texture texture = sf::Texture();
-    
+    int layer = 0;
+
 protected:
     sf::Sprite sprite;
 

@@ -11,6 +11,7 @@ CMakeUserPresets.json
 
 #libs
 /external/SFML/
+/external/mingw64/
 
 # C++ build outputs
 *.exe
