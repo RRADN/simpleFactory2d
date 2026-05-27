@@ -1,0 +1,7 @@
+
+//Rename the "SFML-x.x.x" to simply "SFML"
+//
+// external
+//  | -- SFML
+//  | -- mingw64
+//

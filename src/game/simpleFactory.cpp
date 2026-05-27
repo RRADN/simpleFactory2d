@@ -22,7 +22,7 @@ void Game::run() {
 
 void Game::gameLoop() {
     float deltaTime = clock.restart().asSeconds();
-    Event event(entities);
+    Event event(entities, window);
 
     while (!window.shouldClose()) {
         deltaTime = clock.restart().asSeconds();

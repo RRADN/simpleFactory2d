@@ -4,34 +4,37 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
-#include "../logic/event.hpp"
+// Forward declaration to avoid circular include
+class Event;
 
-class SfmlWindow {
-private:
-    unsigned int WIDTH;
-    unsigned int HEIGHT;
-    std::string TITLE;
+namespace adn {
+    class SfmlWindow {
+    private:
+        unsigned int WIDTH;
+        unsigned int HEIGHT;
+        std::string TITLE;
+        
+        bool isFullscreen;
+
+        sf::RenderWindow *window;
+        sf::Image icon;
+
+        void initWindow(const unsigned int width, const unsigned int height, const std::string &title);
+        void setImageIcon();
+        
+        void eventSwitch(sf::Event &event, Event keyboardEvent);
+        void resize(const sf::Event::Resized resized);
     
-    bool isFullscreen;
+    public:
 
-    sf::RenderWindow *window;
-    sf::Image icon;
+        void pollEvent(Event keyboardEvent);
+        bool shouldClose();
 
-    void initWindow(const unsigned int width, const unsigned int height, const std::string &title);
-    void setImageIcon();
-    
-    void eventSwitch(const sf::Event &event, Event keyboardEvent);
-    void resize(const sf::Event &event, const auto* resized);
-   
-public:
+        void draw(sf::Sprite sprite);
+        void clear();
+        void display();
 
-    void pollEvent(Event keyboardEvent);
-    bool shouldClose();
-
-    void draw(sf::Sprite sprite);
-    void clear();
-    void display();
-
-    SfmlWindow(const unsigned int width, const unsigned int height, const std::string &title);
-    ~SfmlWindow();
-};
+        SfmlWindow(const unsigned int width, const unsigned int height, const std::string &title);
+        ~SfmlWindow();
+    };
+}

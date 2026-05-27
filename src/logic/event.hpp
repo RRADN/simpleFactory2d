@@ -8,10 +8,11 @@
 class Event {
 private:
     Entities *entities;
-    SfmlWindow *window;
+    adn::SfmlWindow *window;
+    
 public:
-    Event(Entities &entities);
+    Event(Entities &entities, adn::SfmlWindow &window);
     virtual ~Event();
 
-    void playerMove();    
+    void playerMove(const sf::Event &event);    
 };

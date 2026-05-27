@@ -15,7 +15,7 @@ public:
     virtual ~Game();
     void run();
 private:
-    SfmlWindow window {WIDTH, HEIGHT, TITLE};
+    adn::SfmlWindow window {WIDTH, HEIGHT, TITLE};
 
     Entities entities;
 
