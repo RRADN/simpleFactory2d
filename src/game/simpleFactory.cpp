@@ -3,43 +3,33 @@
 #include <stdexcept>
 #include <optional>
 
-#include "../entities/handlers/entitiesHandler.hpp"
-#include "../logic/event.hpp"
+//SDL
+#include <SDL3/SDL.h>
 
 #include "simpleFactory.hpp"
 
 Game::Game() {
-
+    std::cout << "Initializing game..." << std::endl;
+    Game::run();
 }
 
 Game::~Game() {
-
+    std::cout << "Cleaning up game resources..." << std::endl;
 }
 
 void Game::run() {
-    gameLoop();
-}
+    std::cout << "Entering main game loop..." << std::endl;
+    bool isRunning = true;
+    SDL_Event event;
 
-void Game::gameLoop() {
-    float deltaTime = clock.restart().asSeconds();
-    Event event(entities, window);
+    while (isRunning) {
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_EVENT_QUIT) {
+                isRunning = false;
+            }
+        }
 
-    while (!window.shouldClose()) {
-        deltaTime = clock.restart().asSeconds();
-
-        window.pollEvent(event);
-
-        update(deltaTime);
-        render();
+        window.clear();
+        window.present();
     }
-}
-
-void Game::update(float deltaTime) {
-    entities.update(deltaTime);
-}
-
-void Game::render() {
-    window.clear();
-    window.draw(entities.getPlayerSprite());
-    window.display();
 }

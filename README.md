@@ -23,13 +23,30 @@ To actualy develop something playable I had to learn:
 
 ## How to run?
 
-1. clone the repo:
-  git clone https://github.com/reyjaz007/simpleFactory2d.git
-2. Install and include the SMFL:
-   https://www.sfml-dev.org/download/sfml/3.0.2/ <--- Download the 64-bit version
-   Paste it on the folder called:  external/
-3. Run de CMkeList.txt file 
-4. And you are ready to go!
+1. Clone the repo:
+   ```bash
+git clone https://github.com/reyjaz007/simpleFactory2d.git
+cd simpleFactory2d
+```
+2. Install dependencies.
+   - On Linux, install SDL3 via your package manager.
+   - On Windows, place SDL3 headers and libraries under `external/SDL3` as expected by `CMakeLists.txt`.
+3. Build the project:
+   ```bash
+mkdir -p build
+cd build
+cmake ..
+cmake --build . --target simpleFactory2d
+```
+4. Run the executable:
+   - Linux/macOS:
+     ```bash
+./simpleFactory2d
+```
+   - Windows (PowerShell):
+     ```powershell
+./simpleFactory2d.exe
+```
 
 ## Proyect State
 
