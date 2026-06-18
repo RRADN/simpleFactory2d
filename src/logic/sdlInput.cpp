@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <algorithm>
+#include <stdexcept>
 
 Input::Input() {
 }
@@ -18,6 +19,8 @@ void Input::update() {
 
     SDL_PumpEvents();
 
+    inputCase();
+    
     const bool* keyboard = SDL_GetKeyboardState(nullptr);
 
     std::copy(
@@ -41,4 +44,15 @@ bool Input::isKeyPressed(SDL_Scancode key) const {
 
 bool Input::isKeyReleased(SDL_Scancode key) const {
     return !currentKeys[key] && previousKeys[key];
+}
+
+void Input::inputCase() {
+    SDL_Event event;
+
+    while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_EVENT_QUIT) {
+            std::cout << "Quit event received. Exiting game loop..." << std::endl;
+            exit(0);
+        }
+    }  
 }

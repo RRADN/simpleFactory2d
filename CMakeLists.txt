@@ -23,6 +23,7 @@ add_executable(${PROJECT_NAME}
     src/game/simpleFactory.cpp
     src/platform/sdlWindow.cpp
     src/logic/sdlInput.cpp
+    src/UI/mainMenu.hpp
 )
 
 # Linking SDL libraries

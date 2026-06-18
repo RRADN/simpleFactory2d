@@ -5,7 +5,6 @@
             "name": "GCC 16.1.1 x86_64-pc-linux-gnu",
             "displayName": "GCC 16.1.1 x86_64-pc-linux-gnu",
             "description": "Using compilers: C = /usr/bin/gcc, CXX = /usr/bin/g++",
-            "generator": "Ninja",
             "binaryDir": "${sourceDir}/out/build/simplefactory",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",

@@ -29,6 +29,7 @@ void Game::run() {
             }
         }
 
+        input.update();
         window.clear();
         window.present();
     }

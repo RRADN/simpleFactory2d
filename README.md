@@ -21,7 +21,7 @@ To actualy develop something playable I had to learn:
 
 - C++ (I had previous expiriense with it)
 - CMake (Just get the basic to make a proyect run)
-- SFML (The "core" of my proyect)
+- SDL (The "core" of my proyect)
 
 ## How to run?
 

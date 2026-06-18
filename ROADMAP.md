@@ -16,7 +16,7 @@
 ## Objetivo inmediato
 Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 
-- [ ] Estabilizar el motor SDL3 y el ciclo principal
+- [x] Estabilizar el motor SDL3 y el ciclo principal
 - [ ] Definir la estructura de entidades y la jerarquía base
 - [ ] Implementar renderizado básico de pruebas
 - [ ] Añadir movimiento y colisiones simples
@@ -29,8 +29,8 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 **Prioridad:** 🔴 CRÍTICA  
 **Tiempo estimado:** 1 día
 
-- [ ] Actualizar documentación para reflejar SDL3 en lugar de SFML
-- [ ] Limpiar y verificar el `CMakeLists.txt`
+- [x] Actualizar documentación para reflejar SDL3 en lugar de SFML
+- [x] Limpiar y verificar el `CMakeLists.txt`
 - [x] Confirmar que `src/platform/sdlContext.hpp` y `src/platform/sdlWindow.*` funcionan en Linux y Windows
 
 ### 0.2 Estructura de entidades mínima

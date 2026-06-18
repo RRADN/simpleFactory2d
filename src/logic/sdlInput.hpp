@@ -18,6 +18,8 @@ public:
     bool isKeyReleased(SDL_Scancode key) const;
 
 private:
+    void inputCase();
+
     bool currentKeys[SDL_SCANCODE_COUNT]{};
 
     bool previousKeys[SDL_SCANCODE_COUNT]{};
