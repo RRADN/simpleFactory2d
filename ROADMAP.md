@@ -18,7 +18,7 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 
 - [x] Estabilizar el motor SDL3 y el ciclo principal
 - [x] Definir la estructura de entidades y la jerarquía base
-- [ ] Implementar renderizado básico de pruebas
+- [x] Implementar renderizado básico de pruebas
 - [ ] Añadir movimiento y colisiones simples
 
 ---
@@ -47,9 +47,9 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 **Dependencias:** 0.2  
 **Tiempo estimado:** 2 días
 
-- [ ] Renderizar un rectángulo o sprite de prueba en pantalla
-- [ ] Añadir colores básicos y clear/present en el renderer
-- [ ] Validar dimensiones y escalado de ventana
+- [x] Renderizar un rectángulo o sprite de prueba en pantalla
+- [x] Añadir colores básicos y clear/present en el renderer
+- [x] Validar dimensiones y escalado de ventana
 
 ### 0.4 Input y loop de actualización
 **Prioridad:** 🟡 ALTA  

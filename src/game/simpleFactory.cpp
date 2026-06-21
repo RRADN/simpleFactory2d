@@ -19,10 +19,16 @@ Game::~Game() {
 
 void Game::run() {
     std::cout << "Entering main game loop..." << std::endl;
+    if (!render.load(window.getRenderer(), "assets/noTexture.png")) {
+        std::cerr << "Failed to load texture. Exiting game loop." << std::endl;
+        return;
+    }
 
-    while (input.update()) {
-        
+    while (input.update()) {      
         window.clear();
+
+        render.draw(window.getRenderer(), 0, 0);
+
         window.present();
     }
 }

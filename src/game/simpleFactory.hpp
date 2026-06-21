@@ -9,6 +9,7 @@
 #include "../platform/sdlWindow.hpp"
 #include "../platform/sdlContext.hpp"
 #include "../logic/sdlInput.hpp"
+#include "../platform/rendering/testrender.cpp"
 
 class Game {
 public:
@@ -16,8 +17,8 @@ public:
     ~Game();
     
 private:
-    const int WIDTH = 1280;
-    const int HEIGHT = 720;
+    const int WIDTH = 1920;
+    const int HEIGHT = 1080;
     const std::string TITLE = "Simple Factory 2D";
     float deltaTime = 0.0f;
 
@@ -27,5 +28,7 @@ private:
 
     Input input;
 
+    Render render {};
+    
     void run();
 };
