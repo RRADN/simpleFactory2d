@@ -5,11 +5,13 @@ public:
     Health();
     ~Health();
 
-    int getHealthPoints() const;
-
     void takeDamage(int damage);
+    void heal(int amount);
+
+    int getHealthPoints() const;
+    void setHealthPoints(int hp);
 
 private:
-
     int healthPoints;
+
 };

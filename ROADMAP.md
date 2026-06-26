@@ -19,7 +19,7 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 - [x] Estabilizar el motor SDL3 y el ciclo principal
 - [x] Definir la estructura de entidades y la jerarquía base
 - [x] Implementar renderizado básico de pruebas
-- [ ] Añadir movimiento y colisiones simples
+- [x] Añadir movimiento y colisiones simples
 
 ---
 
@@ -39,7 +39,7 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 
 - [x] Implementar `Entity` base en `src/entities/primitive/entity.hpp/cpp`
 - [ ] Definir `Tile` simple en `src/entities/primitive/tile.hpp/cpp`
-- [ ] Crear `Player` básico en `src/entities/player/` con movimiento
+- [x] Crear `Player` básico en `src/entities/player/` con movimiento
 - [ ] Añadir `Entity` y `Tile` al ciclo de juego para pruebas
 
 ### 0.3 Renderizado de prueba

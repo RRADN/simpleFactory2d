@@ -1,14 +1,15 @@
 #pragma once 
 
 #include "../../logic/Systems/health.hpp"
-#include "../../logic/Systems/movement.hpp"
+#include "../../logic/Systems/collision.hpp"
 
 class Entity {
 public:
     Entity();
     ~Entity();
 
-private:
-    Health health;
-    Movement movement {1};
+protected:
+    Health health {};
+    Collision Collision {};
+
 };

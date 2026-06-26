@@ -22,11 +22,11 @@ private:
     const std::string TITLE = "Simple Factory 2D";
     float deltaTime = 0.0f;
 
-    Context sdl;
+    Context sdl {};
 
     Window window {TITLE, WIDTH, HEIGHT};
 
-    Input input;
+    Input input {};
 
     Render render {};
     

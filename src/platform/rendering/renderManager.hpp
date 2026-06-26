@@ -13,7 +13,6 @@ public:
     void draw(SDL_Renderer* renderer);
 
 private:
-
     void loadTexture(SDL_Renderer* renderer, const std::string& path);
 
 };

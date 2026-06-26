@@ -5,7 +5,6 @@
 class Context
 {
 public:
-
     Context()
     {
         SDL_Init(SDL_INIT_VIDEO);

@@ -1,11 +1,11 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.30)
 project(simpleFactory2d VERSION 0.2.0 LANGUAGES CXX)
 
 set(SDL3_VERSION "3.0")
 
 # Find or download SDL from a suitable location
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-    # On Linux, use apt-get or another package manager to fetch SDL Libraries
+    # On Linux, use your package manager to fetch SDL Libraries
     find_package(SDL3 REQUIRED)
     find_package(SDL3_image REQUIRED)
 

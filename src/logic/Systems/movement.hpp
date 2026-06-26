@@ -1,18 +1,21 @@
 #pragma once 
 
+#include "collision.hpp"
+
 class Movement {
 public:
-    Movement(int speed);
+    Movement();
     ~Movement();
 
-    void move(int deltaX, int deltaY);
+    void setSpeed(int speed);
+    void setDeltaTime(double deltaTime);
 
-    int getX() const { return x; }
-    int getY() const { return y; }
+    void moveRight(Collision& collision);
+    void moveLeft(Collision& collision);
+    void moveUp(Collision& collision);
+    void moveDown(Collision& collision);
 
 private:
     int speed;
-
-    int x;
-    int y;
+    double deltaTime;
 };

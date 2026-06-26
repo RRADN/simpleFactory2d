@@ -5,7 +5,6 @@
 
 class Window {
 public:
-
     Window(
         const std::string& title,
         int width,
@@ -31,7 +30,6 @@ public:
     SDL_Renderer* getRenderer() const;
 
 private:
-
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
 

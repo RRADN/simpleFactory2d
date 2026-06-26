@@ -11,9 +11,8 @@ CMakeUserPresets.json
 src/CMakePresets.json
 
 #libs
-/external/SFML/
-/external/mingw64/
 /external/SDL3/
+/external/SDL3_image/
 
 # C++ build outputs
 *.exe
@@ -35,3 +34,4 @@ Win32/
 *.tmp
 *.temp
 *~
+*.drawio
