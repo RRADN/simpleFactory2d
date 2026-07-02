@@ -37,9 +37,7 @@ private:
 
     Input input {};
 
-    Render render {};
-
-    Textures textures {};
+    Render render {*window.getRenderer()};
     
     Player player {};
 

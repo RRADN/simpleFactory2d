@@ -7,16 +7,13 @@
 
 class Render{
 public:
-    Render();
-    ~Render();
-
-    void setRenderer(SDL_Renderer& renderer);
-    void setTextureManager(Textures& textureManager);
+    Render(SDL_Renderer& renderer);
+    ~Render() = default;
 
     void draw(AssetsID id, float x, float y);
 
 private:
     SDL_Renderer* renderer;
-    Textures* textures;
 
+    TextureManager textures;
 };

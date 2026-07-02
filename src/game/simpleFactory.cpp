@@ -17,8 +17,6 @@ Game::Game() {
 Game::~Game() {}
 
 void Game::init(){
-    render.setRenderer(*window.getRenderer());
-    render.setTextureManager(textures);
     player.setInputs(input);  
 }
 

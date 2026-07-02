@@ -2,25 +2,11 @@
 
 #include <stdexcept>
 
-Render::Render() {}
-
-Render::~Render() {}
-
-void Render::setRenderer(SDL_Renderer& renderer){
+Render::Render(SDL_Renderer& renderer) : textures{renderer}{
     this->renderer = &renderer;
 }
 
-void Render::setTextureManager(Textures& textureManager){
-    this->textures = &textureManager;
-    textures->load(*renderer);
-}
-
 void Render::draw(AssetsID id, float x, float y){
-    if (!textures->verify()) {
-        throw std::runtime_error("Texture not loaded. Cannot draw.");
-        return;
-    }
-
-    const SDL_FRect destRect = { x, y, textures->getWidth(id), textures->getHeight(id) };
-    SDL_RenderTexture(renderer, textures->getTexture(id), nullptr, &destRect);
+    const SDL_FRect destRect = { x, y, textures.player.getWidth(AssetsID::Player), textures.player.getHeight(AssetsID::Player)};
+    SDL_RenderTexture(renderer, textures.player.getTexure(AssetsID::Player), nullptr, &destRect);
 }
