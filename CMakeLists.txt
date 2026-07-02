@@ -40,6 +40,20 @@ add_executable(${PROJECT_NAME}
     src/logic/input/inputManager.cpp
 )
 
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    target_compile_options(${PROJECT_NAME} PRIVATE
+        -g3
+        -O0
+        -fno-omit-frame-pointer
+        -fno-inline
+        -fsanitize=address
+    )
+
+    target_link_options(${PROJECT_NAME} PRIVATE
+        -fsanitize=address
+    )
+endif()
+
 # Linking SDL libraries
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     target_link_libraries(${PROJECT_NAME} PRIVATE

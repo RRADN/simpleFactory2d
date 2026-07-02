@@ -20,7 +20,6 @@ void Events::inputCase() {
 
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_EVENT_QUIT) {
-            std::cout << "Quit event received. Exiting game loop..." << std::endl;
             shouldClose = true;
         }
     }  

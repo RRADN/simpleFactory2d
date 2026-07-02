@@ -10,8 +10,8 @@
 #include "simpleFactory.hpp"
 
 Game::Game() {
-    Game::init();
-    Game::run();
+    init();
+    run();
 }
 
 Game::~Game() {}
@@ -23,7 +23,7 @@ void Game::init(){
 void Game::run() {
     while (events.update()) {  
         window.clear();
-        Game::update();
+        update();
         window.present();
     }
 }
@@ -31,6 +31,8 @@ void Game::run() {
 void Game::update() {
     timer.update();
     input.update();
-    render.draw(AssetsID(player.getID()), static_cast<float>(player.getX()), static_cast<float>(player.getY()));
+    render.drawTile(TileID::Grass, 100, 100);
+    render.drawTile(TileID::Grass, 164, 100);
+    render.drawPlayer(AssetsID(player.getID()), static_cast<float>(player.getX()), static_cast<float>(player.getY()));
     player.update(timer.getDeltaTime());
 }

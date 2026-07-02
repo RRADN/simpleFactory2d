@@ -27,7 +27,6 @@ private:
     const int WIDTH = 1920;
     const int HEIGHT = 1080;
     const std::string TITLE = "Simple Factory 2D";
-    float deltaTime = 0.0f;
 
     Context sdl {};
 

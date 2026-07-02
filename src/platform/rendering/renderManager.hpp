@@ -10,8 +10,9 @@ public:
     Render(SDL_Renderer& renderer);
     ~Render() = default;
 
-    void draw(AssetsID id, float x, float y);
-
+    void drawPlayer(AssetsID id, float x, float y);
+    void drawTile(TileID id, float x, float y);
+    
 private:
     SDL_Renderer* renderer;
 
