@@ -6,8 +6,6 @@ Events::Events() {
     shouldClose = false;
 }
 
-Events::~Events() {}  
-
 bool Events::update() {
     inputCase();
     

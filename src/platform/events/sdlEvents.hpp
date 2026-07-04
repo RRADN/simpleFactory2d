@@ -5,7 +5,7 @@
 class Events {
 public:
     Events();
-    ~Events();
+    ~Events() = default;
 
     bool update();
 

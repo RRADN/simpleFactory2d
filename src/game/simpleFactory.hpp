@@ -21,7 +21,7 @@
 class Game {
 public:
     Game();
-    ~Game();
+    ~Game() = default;
     
 private:
     const int WIDTH = 1920;

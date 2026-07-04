@@ -5,7 +5,7 @@
 class Input {
 public:
     Input();
-    ~Input();
+    ~Input() = default;
     
     void update();
 

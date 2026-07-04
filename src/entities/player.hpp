@@ -4,12 +4,14 @@
 #include "../logic/systems/playerMovement.hpp"
 #include "../logic/systems/health.hpp"
 
+#include "../core/ids/assetsID.hpp"
+
 #include <string>
 
-class Player : public Entity{
+class Player : public Entity<AssetsID>{
 public:
     Player();
-    ~Player();
+    ~Player() = default;
 
     void testmoveR ();
     void setInputs(Input& input);

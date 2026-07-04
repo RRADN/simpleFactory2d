@@ -2,17 +2,20 @@
 
 #include "../../logic/systems/collision.hpp"
 
+template<typename ID>
 class Entity {
 public:
-    Entity(int ID);
-    ~Entity();
+    Entity(ID id);
+    ~Entity() = default;
 
-    int getID();
+    ID getID() const;
 
 protected:
     Collision collision {0,0,0,0};
 
 private:
-    int ID;
+    ID id;
 
 };
+
+#include "entity.tpp"

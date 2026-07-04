@@ -26,20 +26,23 @@ To actualy develop something playable I had to learn:
 ## How to run?
 
 1. Clone the repo:
-   `bash
+```
+bash
 git clone https://github.com/reyjaz007/simpleFactory2d.git
 cd simpleFactory2d
-`
+```
+
 2. Install dependencies.
    - On Linux, install SDL3/SDL3_image via your package manager.
    - On Windows, place SDL3/SDL3_image headers and libraries under `external/` as expected by `CMakeLists.txt`.
 3. Build the project:
-   `bash
+```
+bash
 mkdir -p build
 cd build
 cmake ..
 cmake --build . --target simpleFactory2d
-`
+```
 4. Run the executable:
    - Linux/macOS:
      `bash

@@ -2,11 +2,11 @@
 
 #include  <iostream>
 
-Player::Player() : Entity {0} {
+#include "../core/ids/assetsID.hpp"
+
+Player::Player() : Entity {AssetsID::Player} {
     movement.setSpeed(100);
 }
-
-Player::~Player() {}
 
 void Player::setInputs(Input& input) {
     movement.setInputs(input);

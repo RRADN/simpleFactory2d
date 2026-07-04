@@ -6,11 +6,11 @@
 - ✅ **Contexto SDL**: `src/platform/sdlContext.hpp` inicializa SDL
 - ✅ **Window Management**: `src/platform/sdlWindow.hpp/cpp` crea la ventana y el renderer
 - ✅ **Game Loop**: `src/game/simpleFactory.cpp` procesa eventos y renderiza pantalla en blanco
-- ⚠️ **Assets**: carpeta de assets existe pero no hay contenido utilizable
-- ⚠️ **Entity scaffolding**: archivos para `Entity` y `Tile` existen, pero están vacíos
-- ❌ **Rendering de sprites/tilemap**: no implementado
-- ❌ **Physics/colisiones**: no existe
-- ❌ **Input avanzado**: solo se detecta evento de cierre de ventana
+- ✅ **Assets**: carpeta de assets existe pero no hay contenido utilizable
+- ✅ **Entity scaffolding**: archivos para `Entity` y `Tile` existen, pero están vacíos
+- ⚠️ **Rendering de sprites/tilemap**: no implementado
+- ⚠️ **Physics/colisiones**: no existe
+- ⚠️ **Input avanzado**: solo se detecta evento de cierre de ventana
 - ❌ **UI, audio, persistencia**: no implementados
 
 ## Objetivo inmediato
@@ -38,9 +38,9 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 **Tiempo estimado:** 2-3 días
 
 - [x] Implementar `Entity` base en `src/entities/primitive/entity.hpp/cpp`
-- [ ] Definir `Tile` simple en `src/entities/primitive/tile.hpp/cpp`
+- [x] Definir `Tile` simple en `src/entities/primitive/tile.hpp/cpp`
 - [x] Crear `Player` básico en `src/entities/player/` con movimiento
-- [ ] Añadir `Entity` y `Tile` al ciclo de juego para pruebas
+- [x] Añadir `Entity` y `Tile` al ciclo de juego para pruebas
 
 ### 0.3 Renderizado de prueba
 **Prioridad:** 🔴 CRÍTICA  
@@ -59,7 +59,7 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 - [x] Capturar eventos de teclado en `Game::run`
 - [x] Mover una entidad `Player` con flechas/WASD
 - [x] Usar `deltaTime` para movimiento consistente
-- [ ] Preparar base para futuros sistemas de input y animación
+- [x] Preparar base para futuros sistemas de input y animación
 
 ---
 

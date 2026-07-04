@@ -4,8 +4,6 @@
 
 Movement::Movement() {}
 
-Movement::~Movement() {}
-
 void Movement::setSpeed(float speed){
     this->speed = speed;
 }

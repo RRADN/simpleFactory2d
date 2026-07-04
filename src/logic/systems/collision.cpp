@@ -9,8 +9,6 @@ Collision::Collision(int x, int y, int width, int height) {
     this->height = height;
 }
 
-Collision::~Collision() {}
-
 void Collision::setXYPosition(int x, int y){
     this->x = x;
     this->y = y;

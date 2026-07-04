@@ -5,8 +5,6 @@
 
 Input::Input() {}
 
-Input::~Input() {}
-
 void Input::update() {
     std::copy(
         currentKeys,

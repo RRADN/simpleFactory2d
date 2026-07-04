@@ -5,5 +5,5 @@
 #include "../ids/tileID.hpp"
 
 const std::unordered_map<TileID, std::string> TilesPath = {
-    {TileID::Grass,  "assets/tiles/tile.png"}
+    {TileID::Grass,  "assets/textures/tiles/tile.png"}
 };

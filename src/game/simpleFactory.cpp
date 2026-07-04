@@ -14,8 +14,6 @@ Game::Game() {
     run();
 }
 
-Game::~Game() {}
-
 void Game::init(){
     player.setInputs(input);  
 }
@@ -31,8 +29,12 @@ void Game::run() {
 void Game::update() {
     timer.update();
     input.update();
-    render.drawTile(TileID::Grass, 100, 100);
-    render.drawTile(TileID::Grass, 164, 100);
+    render.drawTile(TileID::Grass, 0, 0);
+    render.drawTile(TileID::Grass, 64, 0);
+    render.drawTile(TileID::Grass, 0, 64);
+    render.drawTile(TileID::Grass, 64, 64);
+    render.drawTile(TileID::Grass, 128, 64);
+    render.drawTile(TileID::Grass, 64, 128);
     render.drawPlayer(AssetsID(player.getID()), static_cast<float>(player.getX()), static_cast<float>(player.getY()));
     player.update(timer.getDeltaTime());
 }

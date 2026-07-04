@@ -27,12 +27,14 @@ add_executable(${PROJECT_NAME}
     src/main.cpp
     src/game/simpleFactory.cpp
     src/core/timer/timer.cpp
+    #platform
     src/platform/window/sdlWindow.cpp
     src/platform/events/sdlEvents.cpp
     src/platform/rendering/renderManager.cpp
     src/platform/rendering/textureManager.cpp
-    src/entities/primitive/entity.cpp
+    #entities
     src/entities/player.cpp
+    #logic
     src/logic/systems/playerMovement.cpp
     src/logic/systems/collision.cpp
     src/logic/systems/movement.cpp

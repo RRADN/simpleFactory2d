@@ -7,8 +7,6 @@ Timer::Timer() :
     paused(false)
 {}
 
-Timer::~Timer() {}
-
 void Timer::update() {
     if (paused)
     {

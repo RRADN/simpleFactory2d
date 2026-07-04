@@ -13,7 +13,8 @@
 class TextureManager {
 public:
     TextureManager(SDL_Renderer& renderer);
-
+    ~TextureManager() = default;
+    
     TextureMap<AssetsID> player;
 
     TextureMap<TileID> tiles;

@@ -5,7 +5,7 @@
 #include "../ids/assetsID.hpp"
 
 const std::unordered_map<AssetsID, std::string> AssetsPath = {
-    {AssetsID::Player,  "assets/entities/player.png"},
-    {AssetsID::Tiles,   "assets/noTexture.png"},
-    {AssetsID::NoTexture, "assets/noTexture.png"}
+    {AssetsID::Player,  "assets/textures/player/player.png"},
+    {AssetsID::Tiles,   "assets/textures/noTexture.png"},
+    {AssetsID::NoTexture, "assets/textures/noTexture.png"}
 };

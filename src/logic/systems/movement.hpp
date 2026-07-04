@@ -5,7 +5,7 @@
 class Movement {
 public:
     Movement();
-    ~Movement();
+    ~Movement() = default;
 
     void setSpeed(float speed);
     void setDeltaTime(float deltaTime);

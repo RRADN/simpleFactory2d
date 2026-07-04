@@ -3,7 +3,7 @@
 class Health {
 public:
     Health();
-    ~Health();
+    ~Health() = default;
 
     void takeDamage(int damage);
     void heal(int amount);

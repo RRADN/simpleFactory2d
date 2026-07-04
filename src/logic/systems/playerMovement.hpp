@@ -7,7 +7,7 @@
 class PlayerMovement : public Movement {
 public:
     PlayerMovement();
-    ~PlayerMovement();
+    ~PlayerMovement() = default;
 
     void setInputs(Input& input);
     void update(Collision& collision);

@@ -4,8 +4,6 @@ Health::Health() {
     healthPoints = 100;
 }
 
-Health::~Health() {}
-
 int Health::getHealthPoints() const {
     return healthPoints;
 }

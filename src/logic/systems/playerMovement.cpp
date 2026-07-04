@@ -4,8 +4,6 @@
 
 PlayerMovement::PlayerMovement() {}
 
-PlayerMovement::~PlayerMovement() {}
-
 void PlayerMovement::update(Collision& collision) {
     if (input->isKeyDown(SDL_SCANCODE_W)){
         moveUp(collision);

@@ -4,7 +4,7 @@ class Collision {
 public:
     Collision();
     Collision(int x, int y, int width, int height);
-    ~Collision();
+    ~Collision() = default;
 
     float getX() const { return x; }
     float getY() const { return y; }
