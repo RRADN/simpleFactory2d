@@ -34,6 +34,8 @@ add_executable(${PROJECT_NAME}
     src/platform/rendering/textureManager.cpp
     #entities
     src/entities/player.cpp
+    #maps
+    src/map/tileMap.cpp
     #logic
     src/logic/systems/playerMovement.cpp
     src/logic/systems/collision.cpp

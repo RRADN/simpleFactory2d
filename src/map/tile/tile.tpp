@@ -1,14 +1,14 @@
 #include "tile.hpp"
 
 template<typename ID>
+Tile<ID>::Tile() {}
+
+template<typename ID>
 Tile<ID>::Tile(ID id, bool solid, bool visible) {
     this->id = id;
     this->solid = solid;
     this->visible = visible;
 }
-
-template<typename ID>
-Tile<ID>::~Tile() {}
 
 template<typename ID>
 void Tile<ID>::setID(ID id){
@@ -28,6 +28,16 @@ void Tile<ID>::setY(float y){
 template<typename ID>
 ID Tile<ID>::getID() const {
     return id;
+}
+
+template<typename ID>
+float Tile<ID>::getX() const {
+    return collision.getX();
+}
+
+template<typename ID>
+float Tile<ID>::getY() const {
+    return collision.getY();
 }
 
 template<typename ID>

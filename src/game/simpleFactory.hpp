@@ -12,6 +12,8 @@
 
 #include "../logic/input/inputManager.hpp"
 
+#include "../map/tileMap.hpp"
+
 #include "../platform/window/sdlWindow.hpp"
 #include "../platform/window/sdlContext.hpp"
 #include "../platform/events/sdlEvents.hpp"
@@ -41,6 +43,8 @@ private:
     Player player {};
 
     Timer timer {};
+
+    Map map {};
 
     void init();
     void run();

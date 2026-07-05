@@ -72,7 +72,7 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 - [ ] Implementar `TileMap` simple
   - [ ] Matriz de tiles en memoria
   - [ ] Renderizado de grid básico
-  - [ ] Datos de tile sólidos/no sólidos
+  - [x] Datos de tile sólidos/no sólidos
 - [ ] Crear pipeline de assets
   - [ ] Texturas básicas de prueba
   - [ ] Ordenar `assets/` en `textures/`, `sprites/`, `sounds/`

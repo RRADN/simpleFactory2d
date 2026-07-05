@@ -13,6 +13,10 @@ public:
 
     void update();
 
+    std::vector<std::vector<Tile<TileID>>> getMap();
+
 private:
-    std::vector<Tile<TileID>> tiles;
+    int width = 10;
+    int height = 10;
+    std::vector<std::vector<Tile<TileID>>> tiles;
 };
