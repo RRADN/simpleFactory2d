@@ -7,6 +7,10 @@ class Context
 public:
     Context()
     {
+        #ifdef __linux__
+            SDL_SetHint(SDL_HINT_VIDEO_DRIVER, "x11");
+        #endif
+        
         SDL_Init(SDL_INIT_VIDEO);
     }
 

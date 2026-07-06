@@ -69,13 +69,13 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 **Prioridad:** 🔴 CRÍTICA  
 **Tiempo estimado:** 3-4 días
 
-- [ ] Implementar `TileMap` simple
-  - [ ] Matriz de tiles en memoria
-  - [ ] Renderizado de grid básico
+- [x] Implementar `TileMap` simple
+  - [x] Matriz de tiles en memoria
+  - [x] Renderizado de grid básico
   - [x] Datos de tile sólidos/no sólidos
-- [ ] Crear pipeline de assets
-  - [ ] Texturas básicas de prueba
-  - [ ] Ordenar `assets/` en `textures/`, `sprites/`, `sounds/`
+- [x] Crear pipeline de assets
+  - [x] Texturas básicas de prueba
+  - [x] Ordenar `assets/` en `textures/`, `sprites/`, `sounds/`
 
 ### 1.2 Colisiones y movimiento sólido
 **Prioridad:** 🔴 CRÍTICA  

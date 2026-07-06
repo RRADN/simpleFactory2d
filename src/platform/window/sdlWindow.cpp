@@ -25,6 +25,14 @@ Window::Window( const std::string& title, int width, int height)
         SDL_DestroyWindow(window);
         throw std::runtime_error(SDL_GetError());
     }
+
+    SDL_SetRenderDrawColor(
+        renderer,
+        255,
+        255,
+        255,
+        255
+    );
 }
 
 Window::~Window() {
@@ -36,14 +44,6 @@ Window::~Window() {
 }
 
 void Window::clear() {
-    SDL_SetRenderDrawColor(
-        renderer,
-        255,
-        255,
-        255,
-        255
-    );
-
     SDL_RenderClear(renderer);
 }
 

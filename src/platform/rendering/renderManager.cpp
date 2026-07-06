@@ -24,7 +24,7 @@ void Render::drawMap(std::vector<std::vector<Tile<TileID>>> tileMap) {
         for (int j = 0; j < 10; j++){
             const SDL_FRect destRect = {tileMap[i][j].getX(),tileMap[i][j].getY(),
                                     textures.tiles.getWidth(tileMap[i][j].getID()),
-                                     textures.tiles.getHeight(tileMap[i][j].getID())}; 
+                                    textures.tiles.getHeight(tileMap[i][j].getID())}; 
             SDL_RenderTexture(renderer, textures.tiles.getTexure(tileMap[i][j].getID()), nullptr, &destRect);
         }
         i++;
