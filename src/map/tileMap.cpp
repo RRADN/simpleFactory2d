@@ -9,7 +9,7 @@ Map::Map() {
     for (auto& row : tiles) {
         row.resize(width);
         for (int j = 0; j < 10; j++){
-            Tile tile {TileID::Grass, true, true};
+            Tile tile {TileID::Grass, false, true};
             tile.setX(j * 64);
             tile.setY(i * 64);
             tiles[i][j] = tile;

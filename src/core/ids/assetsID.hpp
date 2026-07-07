@@ -9,7 +9,7 @@
 
 enum class AssetsID {
     Player,
-    Tiles,
+    HitBox,
     NoTexture
 };
 

@@ -5,20 +5,25 @@
 PlayerMovement::PlayerMovement() {}
 
 void PlayerMovement::update(Collision& collision) {
-    if (input->isKeyDown(SDL_SCANCODE_W)){
+    if (inputs->sprint){
+        setSpeed(200);// sprint need work
+    } else {
+        setSpeed(100);
+    }
+    if (inputs->moveUp){
         moveUp(collision);
     }
-    if (input->isKeyDown(SDL_SCANCODE_A)){
+    if (inputs->moveLeft){
         moveLeft(collision);
     }
-    if (input->isKeyDown(SDL_SCANCODE_S)){
+    if (inputs->moveDown){
         moveDown(collision);
     }
-    if (input->isKeyDown(SDL_SCANCODE_D)){
+    if (inputs->moveRight){
         moveRight(collision);
     }
 }
 
-void PlayerMovement::setInputs(Input& input) {
-    this->input = &input;
+void PlayerMovement::setInputs(GameInputs& inputs) {
+    this->inputs = &inputs;
 }

@@ -27,7 +27,7 @@ public:
     int getWidth() const;
     int getHeight() const;
 
-    SDL_Renderer* getRenderer() const;
+    SDL_Renderer* getRenderer();
 
 private:
     SDL_Window* window = nullptr;

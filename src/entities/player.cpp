@@ -8,7 +8,7 @@ Player::Player() : Entity {AssetsID::Player} {
     movement.setSpeed(100);
 }
 
-void Player::setInputs(Input& input) {
+void Player::setInputs(GameInputs& input) {
     movement.setInputs(input);
 }
 

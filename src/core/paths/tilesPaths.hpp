@@ -7,6 +7,7 @@
 
 inline std::unordered_map<TileID, std::string> getTilesPath() {
     return {
-        {TileID::Grass, "assets/textures/tiles/tile.png"}
+        {TileID::Grass, "assets/textures/tiles/grass.png"},
+        {TileID::HitBox, "assets/textures/tiles/hitbox.png"}
     };
 }

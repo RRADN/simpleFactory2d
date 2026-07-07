@@ -11,6 +11,7 @@
 #include "../entities/player.hpp"
 
 #include "../logic/input/inputManager.hpp"
+#include "../logic/input/playerInput.hpp"
 
 #include "../map/tileMap.hpp"
 
@@ -38,7 +39,9 @@ private:
 
     Input input {};
 
-    Render render {*window.getRenderer()};
+    PlayerInput playerInput {input};
+
+    Render render {*window.getRenderer(), playerInput.getSystemInputs()};
     
     Player player {};
 

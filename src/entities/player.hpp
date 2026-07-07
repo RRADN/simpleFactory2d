@@ -6,6 +6,8 @@
 
 #include "../core/ids/assetsID.hpp"
 
+#include "../logic/input/inputs.hpp"
+
 #include <string>
 
 class Player : public Entity<AssetsID>{
@@ -14,7 +16,7 @@ public:
     ~Player() = default;
 
     void testmoveR ();
-    void setInputs(Input& input);
+    void setInputs(GameInputs& input);
     void update(float deltaTime);
 
     int getX();

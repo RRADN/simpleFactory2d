@@ -21,7 +21,7 @@ public:
     bool isVisible() const;
 
 private:
-    Collision collision {0,0,0,0};
+    Collision collision {0,0,63,63};
 
     ID id;
 

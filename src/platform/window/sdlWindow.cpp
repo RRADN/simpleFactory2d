@@ -58,6 +58,6 @@ void Window::setTitle(const std::string& title) {
     );
 }
 
-SDL_Renderer* Window::getRenderer() const {
+SDL_Renderer* Window::getRenderer() {
     return renderer;
 }

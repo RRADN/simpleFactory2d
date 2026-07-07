@@ -1,6 +1,6 @@
 #pragma once 
 
-#include "../input/inputManager.hpp"
+#include "../input/inputs.hpp"
 
 #include "movement.hpp"
 
@@ -9,9 +9,9 @@ public:
     PlayerMovement();
     ~PlayerMovement() = default;
 
-    void setInputs(Input& input);
+    void setInputs(GameInputs &inputs);
     void update(Collision& collision);
 
 private:
-    Input* input;
+    GameInputs* inputs;
 };
