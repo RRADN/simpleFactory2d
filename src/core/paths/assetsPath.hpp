@@ -8,7 +8,7 @@
 inline std::unordered_map<AssetsID, std::string> getAssetsPath() {
     return {
         {AssetsID::Player, "assets/textures/player/player.png"},
-        {AssetsID::HitBox, "assets/textures/noTexture.png"},
+        {AssetsID::HitBox, "assets/textures/tiles/hitbox.png"},
         {AssetsID::NoTexture, "assets/textures/noTexture.png"}
     };
 }

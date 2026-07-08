@@ -43,7 +43,7 @@ add_executable(${PROJECT_NAME}
     src/logic/systems/health.cpp
     #input logic
     src/logic/input/inputManager.cpp
-    src/logic/input/playerInput.cpp
+    src/logic/input/keysManager.cpp
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

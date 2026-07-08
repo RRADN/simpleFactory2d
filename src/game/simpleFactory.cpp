@@ -15,8 +15,7 @@ Game::Game() {
 }
 
 void Game::init(){
-    player.setInputs(playerInput.getGameInputs());  
-    
+    player.setInputs(input.getGameInputs());  
 }
 
 void Game::run() {
@@ -30,7 +29,6 @@ void Game::run() {
 void Game::update() {
     timer.update();
     input.update();
-    playerInput.update();
     render.drawMap(map.getMap());
     render.drawTile(TileID::Grass, 700, 700);
     render.drawPlayer(AssetsID(player.getID()), static_cast<float>(player.getX()), static_cast<float>(player.getY()));

@@ -5,21 +5,21 @@
 PlayerMovement::PlayerMovement() {}
 
 void PlayerMovement::update(Collision& collision) {
-    if (inputs->sprint){
+    if (inputs->SHIFT){
         setSpeed(200);// sprint need work
     } else {
         setSpeed(100);
     }
-    if (inputs->moveUp){
+    if (inputs->W){
         moveUp(collision);
     }
-    if (inputs->moveLeft){
+    if (inputs->A){
         moveLeft(collision);
     }
-    if (inputs->moveDown){
+    if (inputs->S){
         moveDown(collision);
     }
-    if (inputs->moveRight){
+    if (inputs->D){
         moveRight(collision);
     }
 }

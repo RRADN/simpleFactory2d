@@ -7,10 +7,15 @@ struct SystemInputs {
 };
 
 struct GameInputs {
-    bool moveUp = false;
-    bool moveDown = false;
-    bool moveLeft = false; 
-    bool moveRight = false;
-    bool sprint = false;
-
+    bool Q = false;
+    bool W = false;
+    bool E = false; 
+    bool A = false;
+    bool S = false;
+    bool D = false;
+    bool Z = false;
+    bool X = false;
+    bool C = false;
+    bool SHIFT = false;
+    bool CTRL = false;
 };

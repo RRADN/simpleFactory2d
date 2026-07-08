@@ -85,7 +85,7 @@ Terminar la base técnica mínima antes de avanzar a mecánicas de juego.
 - [ ] Definir cajas de colisión sencillas para `Entity`
 - [ ] Detectar colisión con tiles sólidos
 - [ ] Evitar que el player atraviese paredes
-- [ ] Añadir modo debug para visualizar hitboxes
+- [x] Añadir modo debug para visualizar hitboxes
 
 ### 1.3 Separación de responsabilidades
 **Prioridad:** 🟡 ALTA  

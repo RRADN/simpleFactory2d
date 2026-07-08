@@ -1,25 +1,25 @@
 #pragma once
 
-#include <SDL3/SDL.h>
+#include "inputs.hpp"
+#include "keysManager.hpp"
 
 class Input {
-public:
+public: 
     Input();
     ~Input() = default;
-    
+
     void update();
 
-    bool isKeyDown(SDL_Scancode key) const;
-
-    bool isKeyUp(SDL_Scancode key) const;
-
-    bool isKeyPressed(SDL_Scancode key) const;
-
-    bool isKeyReleased(SDL_Scancode key) const;
-
+    SystemInputs& getSystemInputs();
+    GameInputs& getGameInputs();
+    
 private:
-    bool currentKeys[SDL_SCANCODE_COUNT]{};
+    void systemUpdate();
+    void gameUpdate();
 
-    bool previousKeys[SDL_SCANCODE_COUNT]{};
+    Keys keys {};
 
+    SystemInputs systemInputs {};
+    GameInputs gameInputs {};
+    
 };
